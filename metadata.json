@@ -1,0 +1,6 @@
+{
+  "name": "A Little Magic For Orni",
+  "description": "A magical single-page animated surprise gift created for Orni.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

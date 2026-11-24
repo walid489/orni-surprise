@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    background-color: #060816;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    touch-action: manipulation;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+/* Smooth GPU-composited butterfly wing flapping */
+@keyframes wingFlapLeft {
+  0%, 100% {
+    transform: perspective(600px) rotateY(8deg) scaleX(1);
+  }
+  50% {
+    transform: perspective(600px) rotateY(58deg) scaleX(0.45);
+  }
+}
+
+@keyframes wingFlapRight {
+  0%, 100% {
+    transform: perspective(600px) rotateY(-8deg) scaleX(1);
+  }
+  50% {
+    transform: perspective(600px) rotateY(-58deg) scaleX(0.45);
+  }
+}
+
+@keyframes gentleBob {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes ambientDriftSlow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(24px, -18px, 0) scale(1.06);
+  }
+  66% {
+    transform: translate3d(-18px, 14px, 0) scale(0.96);
+  }
+}
+
+@keyframes ambientDriftReverse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(-22px, 16px, 0) scale(1.05);
+  }
+  66% {
+    transform: translate3d(18px, -14px, 0) scale(0.95);
+  }
+}
+
+@keyframes auraPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.78;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+  }
+}
+
+.animate-wing-left {
+  transform-origin: right center;
+  animation: wingFlapLeft var(--flap-duration, 0.55s) ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wing-right {
+  transform-origin: left center;
+  animation: wingFlapRight var(--flap-duration, 0.55s) ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-gentle-bob {
+  animation: gentleBob var(--bob-duration, 3.8s) ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-ambient-slow {
+  animation: ambientDriftSlow 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-ambient-reverse {
+  animation: ambientDriftReverse 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-aura-pulse {
+  animation: auraPulse 4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes orbSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orb-spin {
+  animation: orbSpin 18s linear infinite;
+  will-change: transform;
+}
+
+.animate-orb-fast {
+  animation: orbSpin 3.2s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-wing-left,
+  .animate-wing-right,
+  .animate-gentle-bob,
+  .animate-ambient-slow,
+  .animate-ambient-reverse,
+  .animate-aura-pulse,
+  .animate-orb-spin,
+  .animate-orb-fast {
+    animation: none !important;
+  }
+}

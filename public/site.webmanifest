@@ -1,0 +1,21 @@
+{
+  "name": "A Little Magic For Orni",
+  "short_name": "For Orni",
+  "description": "An interactive animated secret garden surprise created for Orni.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060816",
+  "theme_color": "#060816",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

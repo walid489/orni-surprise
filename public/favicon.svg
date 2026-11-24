@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="circle-bg" cx="50%" cy="46%" r="54%">
+      <stop offset="0%" stop-color="#221048" />
+      <stop offset="68%" stop-color="#0b0820" />
+      <stop offset="100%" stop-color="#03040c" />
+    </radialGradient>
+    <radialGradient id="purple-aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.52" />
+      <stop offset="58%" stop-color="#7c3aed" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="wing-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d0fe" />
+      <stop offset="48%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="wing-bottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark circular background -->
+  <circle cx="32" cy="32" r="30" fill="url(#circle-bg)" stroke="#7c3aed" stroke-opacity="0.4" stroke-width="1.2" />
+  <circle cx="32" cy="32" r="24" fill="url(#purple-aura)" />
+
+  <!-- Left wings -->
+  <path
+    d="M31 30 C24 16, 11 13, 10 23 C9 30, 19 35, 31 33 Z"
+    fill="url(#wing-top)"
+    stroke="#f5d0fe"
+    stroke-opacity="0.75"
+    stroke-width="1"
+  />
+  <path
+    d="M31 34 C22 34, 14 40, 18 48 C22 54, 29 48, 31 38 Z"
+    fill="url(#wing-bottom)"
+    stroke="#f5d0fe"
+    stroke-opacity="0.55"
+    stroke-width="1"
+  />
+
+  <!-- Right wings -->
+  <path
+    d="M33 30 C40 16, 53 13, 54 23 C55 30, 45 35, 33 33 Z"
+    fill="url(#wing-top)"
+    stroke="#f5d0fe"
+    stroke-opacity="0.75"
+    stroke-width="1"
+  />
+  <path
+    d="M33 34 C42 34, 50 40, 46 48 C42 54, 35 48, 33 38 Z"
+    fill="url(#wing-bottom)"
+    stroke="#f5d0fe"
+    stroke-opacity="0.55"
+    stroke-width="1"
+  />
+
+  <!-- Glowing body & antennae -->
+  <path d="M31.5 24 Q28 19 26 17" fill="none" stroke="#e9d5ff" stroke-width="1.1" stroke-linecap="round" />
+  <path d="M32.5 24 Q36 19 38 17" fill="none" stroke="#e9d5ff" stroke-width="1.1" stroke-linecap="round" />
+  <ellipse cx="32" cy="34" rx="1.7" ry="9.5" fill="#ffffff" />
+</svg>
